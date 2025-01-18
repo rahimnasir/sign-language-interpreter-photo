@@ -53,7 +53,6 @@ def main():
         if picture is not None:
             # Convert the uploaded file to an image
             image = Image.open(picture)
-            st.image(image, caption="Uploaded Image", use_container_width=True)
 
             # Convert PIL image to OpenCV format
             image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -89,7 +88,8 @@ def main():
     if st.session_state["gesture_list"]:
         # Join the gesture words with a space to form a readable string
         formatted_gestures = ", ".join(st.session_state["gesture_list"])
-        st.write("Detected words:",formatted_gestures)
+        with st.chat_message("user"):
+            st.write("Detected words:",formatted_gestures)
     else:
         st.write("No gestures detected yet.")
 
@@ -97,8 +97,8 @@ def main():
     if st.session_state["gesture_list"]:
         input_message = ", ".join(st.session_state["gesture_list"])
         chatbot_output = run_flow(input_message)
-        st.write("Chatbot Response")
-        st.write(chatbot_output)
+        with st.chat_message("assistant"):
+            st.write(chatbot_output)
 
 if __name__ == "__main__":
     main()
