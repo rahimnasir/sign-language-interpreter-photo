@@ -22,7 +22,7 @@ git clone https://github.com/rahimnasir/sign-language-interpreter-photo.git
 langflow run
 ```
 4. After Langflow is opened, import the JSON which contain the Langflow chatbot for the application into Langflow. The imported bot doesn't have OpenAI API Key. Please insert the OpenAI API Key.
-5. Open Ngrok terminal and run the command with authentication key to add authentication key. You only need to do this once.
+5. Open Ngrok terminal and run the command with authentication key to add authentication key. You need to do this every time new ngrok session is initialized
 ```
 ngrok config add-authtoken <YOUR_AUTH_TOKEN>
 ```
@@ -30,10 +30,19 @@ ngrok config add-authtoken <YOUR_AUTH_TOKEN>
 ```
 ngrok http 7860
 ```
-7. After running the command, copy and paste the forwarding https  to replace the localhost. Here's an example of copying and pasting the forwarding https:
+7. After running the command, copy and paste the forwarding https to replace the localhost. Here's an example of copying and pasting the forwarding https into BASE_API_URL:
 
-8. Lastly, go to this link: 
-5. Enjoy doing the gesture!
+![ngrok](static/ngrok_http.png)
+
+![api](static/base_api.png)
+
+8. Update the python file in GitHub before going into the app.
+
+9. Lastly, go to this [link](https://sign-language-interpreter-photo-nzjl9xfbixzjpd6qba8awi.streamlit.app). Alternatively, you can use the QR Code below to go there:
+
+<img src="static/qr-code.png" width="200">
+
+10. Enjoy doing the gesture!
 
 ## Gesture List
 - Apple 
