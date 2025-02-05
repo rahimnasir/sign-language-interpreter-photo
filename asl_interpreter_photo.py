@@ -6,7 +6,7 @@ from PIL import Image
 import cv2
 import numpy as np
 
-BASE_API_URL = "https://9f33-2001-e68-542f-aca1-4400-a20-2bdd-b6fa.ngrok-free.app"  # Update with your actual LangFlow API base URL
+BASE_API_URL = "https://25b1-124-13-48-251.ngrok-free.app"  # Update with your actual LangFlow API base URL
 FLOW_ID = "78287719-c459-48f1-84ed-db8473f0b34a"
 
 TRAINED_MODEL_PATH = "best.pt"  # Replace with your actual model path
